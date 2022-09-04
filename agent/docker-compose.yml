@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  rtun:
+    image: snsinfu/rtun
+    environment:
+      RTUN_GATEWAY: "ws://52.74.175.2:9000"
+      RTUN_KEY: "dcf2ef43f09d998e3b7aef014ca1f444cea92100fd46390f9b9532c4d9796cc5"
+      RTUN_FORWARD: "10022/tcp:localhost:22, 8080/tcp:localhost:8080,80/tcp:localhost:80, 443/tcp:localhost:443"
+    restart: always
+    network_mode: "host"

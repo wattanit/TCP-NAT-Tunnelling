@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+    rtun-server:
+        image: snsinfu/rtun-server
+        environment:
+            RTUN_AGENT: "10022/tcp, 8080/tcp, 80/tcp, 443/tcp @ dcf2ef43f09d998e3b7aef014ca1f444cea92100fd46390f9b9532c4d9796cc5"
+            RTUN_PORT: 9000
+        ports:
+            - "9000:9000"
+            - "10022:10022"
+            - "8080:8080"
+            - "80:80"
+            - "443:443" 
+        restart: always
