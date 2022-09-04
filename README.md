@@ -2,6 +2,8 @@
 
 Perform TCP tunnelling to a host behind NAT layer/firewall through the use of a public gateway server.
 
+This instruction is written on top of https://github.com/snsinfu/reverse-tunnel
+
 ## Terminology
 
 **service host (agent)** - host that provides web services, in this case the service host is placed behind NAT layers. For example, a PC running in a home network.
